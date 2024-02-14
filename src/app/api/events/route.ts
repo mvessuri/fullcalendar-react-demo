@@ -14,6 +14,9 @@ export async function GET(request: NextRequest) {
   const start = params.get('start')
   const end = params.get('end')
 
+  // If max param is not present set it to 5
+  const max = parseInt(params.get('max') || '5', 10);
+
   if (!start || !end) {
     return NextResponse.json({ error: 'start and end are required' }, { status: 400 })
   }
@@ -25,7 +28,7 @@ export async function GET(request: NextRequest) {
 
   // For each day in the interval, create 2 to 5 random events.
   for (let i = new Date(start); i <= new Date(end); i.setDate(i.getDate() + 1)) {
-    const numEvents = Math.floor(Math.random() * 4) + 2
+    const numEvents = Math.floor(Math.random() * (max)) + 1
     let lastEventEnd = new Date(i);
     for (let j = 0; j < numEvents; j++) {
       const eventStart = new Date(lastEventEnd.getTime() + Math.floor(Math.random() * 24) * 60 * 60 * 1000)

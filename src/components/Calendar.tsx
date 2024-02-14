@@ -6,7 +6,6 @@ import timeGridPlugin from '@fullcalendar/timegrid'
 import listPlugin from '@fullcalendar/list';
 import interactionPlugin from '@fullcalendar/interaction'
 import dayjs from 'dayjs';
-import eventDropInfo from '@fullcalendar/interaction';
 
 export default function Calendar() {
 

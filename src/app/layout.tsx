@@ -26,6 +26,7 @@ export default function RootLayout({
               <Link className="text-gray-50 hover:text-blue-100" href="/timegrid">Time Grid</Link>
               <Link className="text-gray-50 hover:text-blue-100" href="/multimonth">Multi Month</Link>
               <Link className="text-gray-50 hover:text-blue-100" href="/list">List</Link>
+              <Link className="text-gray-50 hover:text-blue-100" href="/bootstrap">Bootstrap 5</Link>
             </nav>
           </div>
           {children}

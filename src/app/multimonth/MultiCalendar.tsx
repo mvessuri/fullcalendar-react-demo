@@ -10,6 +10,9 @@ export default function MultiCalendar() {
       <FullCalendar
         plugins={[multiMonthPlugin]}
         initialView="multiMonthYear"
+        eventSources={[
+          { url: 'http://localhost:3000/api/events?max=2' }
+        ]}
         aspectRatio={1.6}
         height={"100%"}
       />
